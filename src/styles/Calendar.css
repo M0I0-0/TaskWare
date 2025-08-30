@@ -1,0 +1,395 @@
+/* Calendar Container */
+.apple-calendar-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+.calendar-header {
+  padding: 24px 24px 16px;
+}
+
+.calendar-title {
+  margin: 0 0 4px 0;
+  font-size: 36px;
+  font-weight: 700;
+  color: #FFFFFF;
+}
+
+.calendar-date {
+  margin: 0;
+  font-size: 16px;
+  color: #86868B;
+  font-weight: 400;
+}
+
+.calendar-wrapper {
+  flex: 1;
+  padding: 16px;
+  overflow: hidden;
+}
+.calendar-legend {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 16px;
+  border-top: 1px solid #E5E5EA;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: #86868B;
+}
+
+.legend-color {
+  width: 16px;
+  height: 16px;
+  border-radius: 4px;
+}
+
+.event-color {
+  background-color: #3990ee;
+}
+
+.task-color {
+  background-color: #6fce87;
+}
+/* FullCalendar Overrides */
+.fc {
+  height: 100%;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.fc-toolbar {
+  padding: 0 8px 16px;
+  margin-bottom: 0;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.fc-toolbar-title {
+  font-size: 22px;
+  font-weight: 600;
+  color: #1D1D1F;
+  margin: 0;
+}
+
+.fc-button {
+  background: transparent;
+  border: 1px solid #3A3A3C;
+  color: #0A84FF;
+  font-weight: 500;
+  border-radius: 8px;
+  padding: 8px 12px;
+  transition: all 0.2s ease;
+}
+
+.fc-button:hover {
+  background: rgba(0, 122, 255, 0.1);
+  border-color: #007AFF;
+}
+
+.fc-button:active, .fc-button:focus {
+  background: rgba(0, 122, 255, 0.15);
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(0, 122, 255, 0.2);
+}
+
+.fc-today-button {
+  background: #0A84FF;
+  color: white;
+  border: none;
+}
+
+.fc-today-button:hover {
+  background: #0077ED;
+}
+
+.fc-today-button:disabled {
+  background: #E5E5EA;
+  color: #8E8E93;
+  cursor: not-allowed;
+}
+
+.fc-header-toolbar {
+  margin-bottom: 12px !important;
+  font-size: 15px;
+}
+
+.fc-dayGridMonth-view {
+  background: transparent;
+}
+
+.fc-scrollgrid {
+  border: none;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  background: #1C1C1E;
+}
+
+.fc-col-header {
+  background: #1C1C1E;
+}
+
+.fc-col-header-cell {
+  padding: 12px 0;
+  border: none;
+  border-bottom: 1px solid #2C2C2E;
+}
+
+.fc-col-header-cell-cushion {
+  color: #8E8E93;
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+  padding: 8px;
+}
+
+.fc-day {
+  border: 1px solid #2C2C2E;;
+  background: #1C1C1E;
+  transition: background-color 0.2s ease;
+}
+
+.fc-day:hover {
+  background: #2C2C2E;
+}
+
+.fc-day-today {
+  background-color: rgba(10, 132, 255, 0.15) !important;
+}
+
+.fc-day-today .fc-daygrid-day-number {
+  color: #0A84FF;
+  font-weight: 600;
+}
+
+.fc-daygrid-day-number {
+  color: #FFFFFF;
+  font-size: 15px;
+  font-weight: 400;
+  padding: 8px;
+  text-decoration: none;
+}
+
+.fc-daygrid-event {
+  border-radius: 6px;
+  padding: 2px 6px;
+  margin: 2px;
+  font-size: 13px;
+  font-weight: 500;
+  border: none;
+}
+
+.fc-daygrid-event-dot {
+  display: none;
+}
+
+.fc-daygrid-dot-event .fc-event-title {
+  font-weight: 500;
+}
+
+.fc-more-link {
+  color: #007AFF;
+  font-size: 13px;
+  font-weight: 500;
+  margin: 4px 8px;
+}
+
+.fc-popover {
+  border: none;
+  border-radius: 12px;
+  background: #2C2C2E;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+
+.fc-popover-header {
+  background: #3A3A3C;
+  color: #FFFFFF;
+  border: none;
+  font-weight: 600;
+  padding: 12px;
+}
+
+.fc-popover-close {
+  opacity: 0.7;
+  transition: opacity 0.2s ease;
+}
+
+.fc-popover-close:hover {
+  opacity: 1;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .apple-calendar-container {
+    height: auto;
+    min-height: 100vh;
+  }
+  
+  .calendar-header {
+    padding: 20px 16px 12px;
+  }
+  
+  .calendar-title {
+    font-size: 24px;
+  }
+  
+  .calendar-date {
+    font-size: 14px;
+  }
+  
+  .calendar-wrapper {
+    padding: 12px;
+  }
+  
+  .fc-toolbar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 0 0 12px;
+  }
+  
+  .fc-toolbar-chunk {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .fc-toolbar-title {
+    font-size: 18px;
+    text-align: center;
+    margin: 8px 0;
+  }
+  
+  .fc-button {
+    padding: 6px 10px;
+    font-size: 14px;
+  }
+  
+  .fc-col-header-cell-cushion {
+    font-size: 12px;
+    padding: 4px;
+  }
+  
+  .fc-daygrid-day-number {
+    font-size: 13px;
+    padding: 4px;
+  }
+  
+  .fc-daygrid-event {
+    font-size: 11px;
+    padding: 1px 4px;
+  }
+}
+
+@media (max-width: 480px) {
+  .fc-toolbar-chunk:nth-child(2) {
+    order: -1;
+  }
+  
+  .fc-toolbar-chunk {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  
+  .fc-today-button {
+    order: 1;
+    flex: 1;
+    min-width: 100px;
+  }
+  
+  .fc-prev-button, .fc-next-button {
+    flex: 1;
+    min-width: 60px;
+  }
+}
+/* Modal fondo */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* Caja modal */
+.modal {
+  background: #1e1e1e;
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.7);
+  width: 350px;
+  text-align: center;
+}
+
+.modal h3 {
+  margin-top: 0;
+  color: #fcfcfc;
+}
+
+.modal p {
+  font-size: 14px;
+  margin-bottom: 15px;
+  color: #aaa;
+}
+
+.modal input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  border: none;
+  background: #252525;
+  color: white;
+}
+
+.modal input:focus {
+  outline: none;
+  border: 1px solid #2962ff;
+  box-shadow: 0 0 8px rgba(41,98,255,0.5);
+}
+
+.modal-buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.modal button {
+  flex: 1;
+  margin: 0 5px;
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.modal button:first-child {
+  background: #2962ff;
+  color: white;
+}
+
+.modal button:last-child {
+  background: #444;
+  color: white;
+}
+
+.modal button:first-child:hover {
+  background: #1e4fe0;
+}
+
+.modal button:last-child:hover {
+  background: #666;
+}
